@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie Nova Senha</title>
+    <link rel="stylesheet" href="style-recuperacao.css">
+</head>
+<body>
+    <div class="container-nova-senha">
+        <a class="botao-voltar botao-primario" href="index.html">VOLTAR</a>
+
+        <div class="cabecalho-nova-senha">
+            <img src="img/cadeado senha.png" alt="Ícone de redefinir senha" class="icone-cabecalho-senha">
+        </div>
+
+        <h2 class="titulo-instrucao-nova-senha">Crie sua nova senha e anote para não esquecer</h2>
+        
+        <div class="campo-nova-senha campo-input-generico">
+            <input type="password" id="novaSenha" placeholder="Nova Senha">
+        </div>
+
+        <div class="campo-nova-senha campo-input-generico">
+            <input type="password" id="confirmaSenha" placeholder="Confirme a Senha">
+        </div>
+
+        <button class="botao-primario" onclick="alert('Senha alterada com sucesso! Redirecionando para login.'); window.location.href='index.html'">ENVIAR</button>
+    </div>
+</body>
+</html>

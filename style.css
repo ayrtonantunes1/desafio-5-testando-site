@@ -1,0 +1,334 @@
+/* Variáveis CSS Globais e de Cores */
+
+:root {
+    /* Cores de Fundo */
+    --cor-fundo-body: #18579E; /* Fundo principal da página */
+    --cor-fundo-container: #1163AD; /* Fundo dos containers de formulário */
+
+    /* Cores de Texto e Campos */
+    --cor-texto-claro: white;
+    --cor-fundo-campo: white;
+    --cor-texto-campo: #747474; /* Cor do texto e placeholder dentro dos inputs */
+
+    /* Cores dos Botões */
+    --cor-botao-primario: #7CB37E; /* Verde dos botões principais */
+    --cor-botao-primario-hover: #45a049; /* Verde mais escuro no hover */
+
+    /* Cores de Links */
+    --cor-link-secundario: #9AD3AB; /* Verde claro para links secundários */
+}
+
+/* Estilos Base as Páginas */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--cor-texto-claro);
+    padding: 15px;
+    box-sizing: border-box; 
+}
+
+/* Estilos para grupos de entrada (ícone + input) */
+.grupo-entrada {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo-campo);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.icone-campo { /* Ícones dentro dos campos de input */
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.grupo-entrada input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px 0;
+    font-size: 16px;
+    color: var(--cor-texto-campo);
+}
+
+.grupo-entrada input::placeholder {
+    color: var(--cor-texto-campo);
+}
+
+/* Estilos de Label cadastro */
+.label-campo {
+    display: block;
+    color: var(--cor-texto-claro);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/* Estilos para inputs de formulário de cadastro */
+
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="date"],
+.formulario-cadastro input[type="email"],
+.formulario-cadastro input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--cor-texto-campo);
+    background-color: var(--cor-fundo-campo);
+    outline: none;
+}
+
+.formulario-cadastro input::placeholder {
+    color: var(--cor-texto-campo);
+}
+
+
+/* Estilos Específicos da Página de Login  */
+
+.container-login {
+    background-color: var(--cor-fundo-container);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px; /* Largura padrão para maiores */
+    max-width: 90%;
+}
+
+.circulo-avatar {
+    width: 120px;
+    height: 120px;
+    background-color: var(--cor-fundo-container);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+.imagem-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.link-esqueceu-senha {
+    display: block;
+    text-align: left;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.link-esqueceu-senha:hover {
+    text-decoration: underline;
+}
+
+.botao-acessar {
+    background-color: var(--cor-botao-primario);
+    color: var(--cor-texto-claro);
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.botao-acessar:hover {
+    background-color: var(--cor-botao-primario-hover);
+}
+
+.texto-criar-conta {
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+}
+
+.texto-criar-conta a {
+    color: var(--cor-link-secundario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto-criar-conta a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos Específicos da Página de Cadastro (cadastro.html) */
+
+.container-cadastro {
+    background-color: var(--cor-fundo-container);
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px; /* Largura padrão telas maiores */
+    max-width: 90%;
+    position: relative;
+}
+
+/* Estilo para o botão VOLTAR (cadastro) */
+
+.botao-voltar {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 10;
+    background-color: var(--cor-botao-primario); /* Fundo do botão */
+    color: var(--cor-texto-claro); /* Texto do botão */
+    padding: 8px 15px; /* Padding para um botão menor */
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para que o padding e a largura funcionem */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+.botao-voltar:hover {
+    background-color: var(--cor-botao-primario-hover);
+}
+
+.cabecalho-cadastro {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.icone-cabecalho { /* Ícone do cabeçalho de cadastro */
+    width: 250px; /* Tamanho padrão */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.formulario-cadastro {
+    text-align: left;
+}
+
+.botao-enviar {
+    background-color: var(--cor-botao-primario);
+    color: var(--cor-texto-claro);
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.botao-enviar:hover {
+    background-color: var(--cor-botao-primario-hover);
+}
+
+
+
+/* Para telas menores que 768px  */
+
+@media (max-width: 768px) {
+    .container-login,
+    .container-cadastro {
+        width: 95%; /* Ocupa mais largura em telas menores */
+        padding: 30px 20px; /* Reduz um pouco o padding interno */
+    }
+
+    .circulo-avatar {
+        width: 100px; /* Diminui um pouco o avatar */
+        height: 100px;
+    }
+
+    .icone-cabecalho {
+        width: 200px; /* Diminui o ícone de cadastro */
+    }
+
+    .botao-voltar {
+        top: 10px; /* Ajusta a posição do botão voltar */
+        left: 10px;
+        font-size: 12px; /* Fonte um pouco menor */
+        padding: 6px 12px;
+    }
+
+    .link-esqueceu-senha,
+    .texto-criar-conta {
+        font-size: 13px; /* Fonte menor para textos de link */
+    }
+
+    .botao-acessar,
+    .botao-enviar {
+        font-size: 16px; /* Fonte menor para botões principais */
+        padding: 12px 0;
+    }
+}
+
+/* Para telas menores que 480px  */
+@media (max-width: 480px) {
+    .container-login,
+    .container-cadastro {
+        width: 100%; /* Ocupa largura total (com padding do body) */
+        border-radius: 0; /* Remove borda arredondada para ocupar a tela toda */
+        box-shadow: none; /* Remove sombra em celulares para um visual mais "app" */
+    }
+
+    /* Reduz ainda mais o padding do container para dispositivos muito pequenos */
+    .container-cadastro {
+        padding: 10px 15px; /* Padding menor */
+    }
+    .container-login {
+        padding: 25px 15px;
+    }
+
+    .circulo-avatar {
+        width: 80px; /* Avatar ainda menor */
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .icone-cabecalho {
+        width: 150px; /* Ícone de cadastro menor */
+    }
+
+    .grupo-entrada input,
+    .formulario-cadastro input[type="text"],
+    .formulario-cadastro input[type="date"],
+    .formulario-cadastro input[type="email"],
+    .formulario-cadastro input[type="password"] {
+        font-size: 14px; /* Fonte dos inputs menor */
+        padding: 10px;
+    }
+
+    .botao-voltar {
+        font-size: 11px; /* Fonte mínima para o botão voltar */
+        padding: 5px 10px;
+    }
+
+    .label-campo {
+        font-size: 12px; /* Fonte menor para labels */
+    }
+}

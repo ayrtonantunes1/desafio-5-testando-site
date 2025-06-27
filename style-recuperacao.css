@@ -1,0 +1,186 @@
+/* Variáveis CSS Globais e de Cores */
+
+:root {
+    /* Cores de Fundo */
+    --cor-fundo-body: #18579E; /* Fundo principal da página */
+    --cor-fundo-container: #1163AD; /* Fundo dos containers */
+
+    /* Cores de Texto e Campos */
+    --cor-texto-claro: white;
+    --cor-fundo-campo: white;
+    --cor-texto-campo: #747474; /* Cor do texto e placeholder nos inputs */
+
+    /* Cores dos Botões */
+    --cor-botao-primario: #7CB37E; /* Verde do botão "ENVIAR" */
+    --cor-botao-primario-hover: #45a049; /* Verde mais escuro no hover */
+}
+
+/* Estilos Base Páginas */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--cor-texto-claro);
+}
+
+/* Estilos para campos de input genéricos */
+
+.campo-input-generico input[type="text"],
+.campo-input-generico input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--cor-texto-campo);
+    background-color: var(--cor-fundo-campo);
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.campo-input-generico input::placeholder {
+    color: var(--cor-texto-campo);
+}
+
+/* Estilos os botões "ENVIAR" E "VOLTAR" */
+
+.botao-primario {
+    background-color: var(--cor-botao-primario);
+    color: var(--cor-texto-claro);
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%; 
+    font-size: 18px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: block; 
+}
+
+.botao-primario:hover {
+    background-color: var(--cor-botao-primario-hover);
+}
+
+/* Estilo para o botão VOLTAR */
+
+.botao-voltar {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 10;
+    width: auto; /* Largura automática para o conteúdo */
+    padding: 8px 15px; /* Ajusta o padding para um botão menor */
+    font-size: 14px; /* Fonte menor para o botão voltar */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    display: inline-block; 
+}
+
+
+.container-encontrar-conta,
+.container-verificar-codigo,
+.container-nova-senha {
+    background-color: var(--cor-fundo-container);
+    padding: 40px 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    max-width: 90%;
+    position: relative; 
+}
+
+
+/* Estilos Específicos da Página "Encontrar Sua Conta" */
+
+.cabecalho-encontrar-conta {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.icone-cabecalho-busca {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.titulo-pagina {
+    color: var(--cor-texto-claro);
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.descricao-pagina {
+    color: var(--cor-texto-claro);
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.campo-busca input[type="text"] {
+    margin-bottom: 20px;
+}
+
+
+/* Estilos Específicos da Página "Verificar Código de Segurança" */
+
+.cabecalho-verificar-codigo {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+.icone-cabecalho-email {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.titulo-instrucao {
+    color: var(--cor-texto-claro);
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.campo-codigo input[type="text"] {
+    margin-bottom: 20px;
+}
+
+/* Estilos Específicos da Página "Crie Nova Senha" */
+
+.cabecalho-nova-senha {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+.icone-cabecalho-senha {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.titulo-instrucao-nova-senha {
+    color: var(--cor-texto-claro);
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.campo-nova-senha input[type="password"] {
+    margin-bottom: 20px;
+}
